@@ -1,0 +1,4 @@
+# python_collect_domain
+pycharm工程
+python爬取主页全部的url
+需要threadpool、requests、lxml模块请自行pip install
