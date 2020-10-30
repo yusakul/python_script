@@ -37,6 +37,7 @@ class Extractor:
 	def emailEX(self):
 		emails = open("./EX_EMAILS.txt","a")
 		data = fileReader(self.file)
+		data=data.decode('utf-8')#python3
 		ex_emails= list(set(re.findall(r'[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+', data)))
 		
 		for email in ex_emails:
@@ -48,6 +49,7 @@ class Extractor:
 	def urlsEX(self):
 		urls = open("./EX_URLS.txt","a")
 		data = fileReader(self.file)
+		data=data.decode('utf-8')#python3
 		ex_urls = list(set(re.findall(r'(?:https?|ftp):\/\/[\w/\-?=%.]+\.[\w/\-?=%.]+', data)))
 		for url in ex_urls:
 			if len(url) < 2:
@@ -58,6 +60,7 @@ class Extractor:
 	def ipsEX(self):
 		ips = open("./EX_IPS.txt","a")
 		data = fileReader(self.file)
+		data=data.decode('utf-8')#python3
                 ex_ips = list(set(re.findall(r'\b(?:25[0-5]\.|2[0-4]\d\.|[01]?\d\d?\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\b', data)))
 		ex_ips += list(set(re.findall(r'\b(?:25[0-5]\.|2[0-4]\d\.|[01]?\d\d?\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\b', data)))
 		
