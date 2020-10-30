@@ -62,7 +62,7 @@ class Extractor:
 		data = fileReader(self.file)
 		data=data.decode('utf-8')#python3
                 ex_ips = list(set(re.findall(r'\b(?:25[0-5]\.|2[0-4]\d\.|[01]?\d\d?\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\b', data)))
-		ex_ips += list(set(re.findall(r'\b(?:25[0-5]\.|2[0-4]\d\.|[01]?\d\d?\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\b', data)))
+		#ex_ips += list(set(re.findall(r'\b(?:25[0-5]\.|2[0-4]\d\.|[01]?\d\d?\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\b', data)))
 		
 		for ip in ex_ips:
 			if validate_ip(ip):
