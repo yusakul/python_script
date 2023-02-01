@@ -8,6 +8,8 @@ import csv
 '''
 处理一般的chm木马，利用控件adb880a6-d8ff-11cf-9377-00aa003b7a11
 具体为提取htm参数到csv
+parse_chm.py ./dir
+dir目录为chm文件
 '''
 
 
